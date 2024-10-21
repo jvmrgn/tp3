@@ -1,0 +1,17 @@
+id_funcionario,nome,cargo_id,departamento_id,data_nascimento
+1,João Silva,1,1,1985-06-15
+2,Ana Souza,2,2,1990-11-23
+3,Carlos Pereira,3,3,1978-03-12
+4,Beatriz Oliveira,4,4,1992-04-10
+5,Pedro Alves,5,5,1988-07-19
+6,Mariana Martins,1,2,1993-02-25
+7,Ricardo Santos,2,1,1976-10-11
+8,Fernanda Lima,3,4,1983-05-30
+9,Lucas Costa,4,5,1995-08-14
+10,Julia Mendes,5,3,1989-12-03
+11,João Magrini,2,2,2005-04-12
+12,Julio Almeida,2,2,2003-04-12
+13,Renata Lima,1,5,1991-03-22
+14,Marcelo Rocha,2,5,1980-09-05
+15,Sofia Castro,3,5,1996-07-16
+16,André Gomes,4,5,1987-12-30

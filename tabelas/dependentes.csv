@@ -1,0 +1,11 @@
+id_dependente,nome,id_funcionario,data_nascimento
+1,Joãozinho Silva,1,2010-04-05
+2,Maria Silva,1,2012-07-22
+3,Pedro Souza,2,2008-03-11
+4,Luiza Souza,2,2011-11-30
+5,Fernando Pereira,3,2009-06-15
+6,Ana Pereira,3,2013-09-03
+7,Carlos Oliveira,4,2012-01-19
+8,Felipe Oliveira,4,2015-08-25
+9,Julia Alves,5,2007-12-01
+10,Marcos Alves,5,2009-05-09
