@@ -1,0 +1,21 @@
+id_recurso,id_projeto,descricao_recurso,tipo_recurso,quantidade_utilizada,data_utilizacao,custo_unitario,custo_total
+1,1,Software de gestão de RH,Humano,3,2023-02-10,1000,3000
+2,1,Computadores para testes,Material,5,2023-01-20,1500,7500
+3,2,Consultoria de design,Humano,2,2023-03-15,1200,2400
+4,2,Licença de hospedagem,Financeiro,1,2023-04-05,500,500
+5,3,Equipe de desenvolvimento,Humano,4,2023-06-10,800,3200
+6,3,Serviços de nuvem,Material,10,2023-05-25,300,3000
+7,4,Plataforma de anúncios online,Financeiro,1,2023-04-15,2000,2000
+8,4,Designer gráfico,Humano,1,2023-05-05,1500,1500
+9,5,Equipamentos de automação,Material,8,2023-02-12,2000,16000
+10,5,Consultoria financeira,Humano,2,2023-03-01,1500,3000
+11,6,Software de gestão empresarial,Material,4,2023-08-01,1000,4000
+12,6,Equipe de análise de dados,Humano,5,2023-07-15,850,4250
+13,7,Plataforma de e-commerce,Material,1,2023-08-25,5000,5000
+14,7,Consultoria de marketing,Humano,3,2023-09-05,1300,3900
+15,8,Serviços de análise de dados,Financeiro,1,2023-09-10,2000,2000
+16,8,Software de BI,Material,2,2023-09-20,1500,3000
+17,9,Agência de publicidade,Humano,2,2023-06-05,1800,3600
+18,9,Material gráfico,Material,100,2023-05-18,20,2000
+19,10,Sistema de gestão de estoque,Material,3,2023-10-05,1200,3600
+20,10,Consultoria de logística,Humano,2,2023-10-10,1400,2800

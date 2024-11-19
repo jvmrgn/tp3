@@ -18,7 +18,10 @@ tabelas = {
     os.path.join(dir_atual, '..', 'tabelas', 'cargos.csv'): 'Cargos',
     os.path.join(dir_atual, '..', 'tabelas', 'departamentos.csv'): 'Departamentos',
     os.path.join(dir_atual, '..', 'tabelas', 'historico_salarios.csv'): 'HistoricoSalarios',
-    os.path.join(dir_atual, '..', 'tabelas', 'dependentes.csv'): 'Dependentes'
+    os.path.join(dir_atual, '..', 'tabelas', 'dependentes.csv'): 'Dependentes',
+    os.path.join(dir_atual, '..', 'tabelas', 'projetos.csv'): 'Projetos',
+    os.path.join(dir_atual, '..', 'tabelas', 'recursos_projeto.csv'): 'RecursosProjeto'
+
 }
 
 for arquivo_csv, nome_tabela in tabelas.items():

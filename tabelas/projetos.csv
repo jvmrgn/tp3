@@ -1,0 +1,11 @@
+id_projeto,nome_projeto,descricao,data_inicio,data_conclusao,funcionario_responsavel,custo,status,cliente,prioridade,departamento_id
+1,Sistema de RH,Desenvolvimento de um sistema de gestão de recursos humanos,2023-01-01,2023-06-30,1,50000,Concluído,Empresa A,Alta,1
+2,Site Institucional,Criação de um site para a empresa,2023-03-01,2023-09-15,2,20000,Em Execução,Empresa B,Média,2
+3,App de Delivery,Desenvolvimento de um aplicativo para entrega de comida,2023-05-01,,3,75000,Em Planejamento,Empresa C,Alta,3
+4,Campanha de Marketing,Lançamento de campanha digital para um produto,2023-04-15,2023-05-30,4,15000,Concluído,Empresa D,Baixa,3
+5,Automação Financeira,Automatização de processos financeiros,2023-02-01,,5,60000,Cancelado,Empresa E,Alta,4
+6,Software de Gestão,Desenvolvimento de software para gestão empresarial,2023-07-01,,1,80000,Em Execução,Empresa F,Alta,2
+7,E-commerce,Criação de uma plataforma de vendas online,2023-08-15,2024-01-30,2,45000,Em Execução,Empresa G,Média,2
+8,Análise de Dados,Implementação de um sistema de BI para análise de dados,2023-09-01,,3,70000,Em Planejamento,Empresa H,Alta,3
+9,Rebranding,Lançamento de nova identidade visual,2023-05-10,2023-07-20,4,25000,Concluído,Empresa I,Média,3
+10,Gestão de Estoque,Desenvolvimento de um sistema para controle de estoque,2023-10-01,,5,55000,Em Planejamento,Empresa J,Baixa,4

@@ -1,24 +1,28 @@
-# 5. Listar qual estagiário possui filho.
 import sqlite3
 
-def listar_estagiarios_com_filhos():
-    conn = sqlite3.connect('empresa.db')
-    cursor = conn.cursor()
+conn = sqlite3.connect('empresa.db') 
+cursor = conn.cursor()
 
-    query = '''
-    SELECT f.nome AS estagiario
-    FROM Funcionarios f
-    JOIN Cargos c ON f.cargo_id = c.id_cargo
-    JOIN Dependentes dep ON f.id_funcionario = dep.id_funcionario
-    WHERE c.descricao = 'Estagiário'
-    '''
-    
-    cursor.execute(query)
-    results = cursor.fetchall()
+query = '''
+SELECT p.id_projeto, p.nome_projeto, COUNT(d.id_dependente) AS num_dependentes
+FROM projetos p
+JOIN funcionarios f ON p.funcionario_responsavel = f.id_funcionario
+LEFT JOIN dependentes d ON f.id_funcionario = d.id_funcionario
+GROUP BY p.id_projeto, p.nome_projeto
+ORDER BY num_dependentes DESC
+LIMIT 1;
+'''
 
-    for row in results:
-        print(row)
+cursor.execute(query)
 
-    conn.close()
+resultado = cursor.fetchone()
 
-listar_estagiarios_com_filhos()
+if resultado:
+    print(f'Projeto com mais dependentes:')
+    print(f'ID do Projeto: {resultado[0]}')
+    print(f'Nome do Projeto: {resultado[1]}')
+    print(f'Número de Dependentes: {resultado[2]}')
+else:
+    print('Nenhum projeto encontrado.')
+
+conn.close()

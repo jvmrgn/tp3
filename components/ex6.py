@@ -1,18 +1,39 @@
-# 6. Listar o funcionário que teve o salário médio mais alto.
-import os
-import pandas as pd
+import sqlite3
+import json
 
-def listar_funcionario_salario_medio_mais_alto():
-    dir_atual = os.path.dirname(os.path.abspath(__file__))
+conn = sqlite3.connect('empresa.db')
+cursor = conn.cursor()
 
-    historico_salarios = pd.read_csv(os.path.join(dir_atual, '..', 'tabelas', 'historico_salarios.csv'))
-    funcionarios = pd.read_csv(os.path.join(dir_atual, '..', 'tabelas', 'funcionarios.csv'))
+query_1 = '''
+SELECT p.id_projeto, p.nome_projeto, p.custo, p.data_inicio, p.data_conclusao, f.nome
+FROM projetos p
+JOIN funcionarios f ON p.funcionario_responsavel = f.id_funcionario
+WHERE p.status = 'Em Execução';
+'''
 
-    salario_medio = historico_salarios.groupby('id_funcionario')['salario'].mean().reset_index()
-    salario_medio = salario_medio.merge(funcionarios[['id_funcionario', 'nome']], on='id_funcionario')
-    
-    funcionario_alto = salario_medio.loc[salario_medio['salario'].idxmax()]
+try:
+    cursor.execute(query_1)
 
-    print(funcionario_alto)
+    resultados_1 = cursor.fetchall()
 
-listar_funcionario_salario_medio_mais_alto()
+    projetos_em_execucao = []
+    for resultado in resultados_1:
+        projeto = {
+            'id_projeto': resultado[0],
+            'nome_projeto': resultado[1],
+            'custo': resultado[2],
+            'data_inicio': resultado[3],
+            'data_conclusao': resultado[4] if resultado[4] else 'Em andamento', 
+            'funcionario_responsavel': resultado[5]
+        }
+        projetos_em_execucao.append(projeto)
+
+    with open('projetos_em_execucao.json', 'w', encoding='utf-8') as json_file:
+        json.dump(projetos_em_execucao, json_file, ensure_ascii=False, indent=4)
+
+    print("Arquivo JSON gerado com sucesso!")
+
+except sqlite3.OperationalError as e:
+    print(f"Erro na consulta SQL: {e}")
+
+conn.close()

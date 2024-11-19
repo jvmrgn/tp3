@@ -1,25 +1,22 @@
-# 2. Listar os funcionários, com seus cargos, departamentos e os respectivos dependentes:
 import sqlite3
 
-def listar_funcionarios_cargos_departamentos_dependentes():
-    conn = sqlite3.connect('empresa.db')
-    cursor = conn.cursor()
+conn = sqlite3.connect('empresa.db')
+cursor = conn.cursor()
 
-    query = '''
-    SELECT f.nome AS funcionario, c.descricao AS cargo, d.nome_departamento AS departamento, dep.nome AS dependente
-    FROM Funcionarios f
-    JOIN Cargos c ON f.cargo_id = c.id_cargo
-    JOIN Departamentos d ON f.departamento_id = d.id_departamento
-    LEFT JOIN Dependentes dep ON f.id_funcionario = dep.id_funcionario
-    ORDER BY f.nome
-    '''
-    
-    cursor.execute(query)
-    results = cursor.fetchall()
+query = """
+SELECT rp.descricao_recurso, SUM(rp.quantidade_utilizada) AS quantidade_total
+FROM RecursosProjeto rp
+WHERE rp.tipo_recurso = 'Material'
+GROUP BY rp.descricao_recurso
+ORDER BY quantidade_total DESC
+LIMIT 3;
+"""
 
-    for row in results:
-        print(row)
+cursor.execute(query)
 
-    conn.close()
+resultados = cursor.fetchall()
 
-listar_funcionarios_cargos_departamentos_dependentes()
+for resultado in resultados:
+    print(f"Recurso: {resultado[0]}, Quantidade Total: {resultado[1]}")
+
+conn.close()

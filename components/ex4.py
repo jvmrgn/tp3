@@ -1,24 +1,25 @@
-# 4. Listar a média de idade dos filhos dos funcionários por departamento.
 import sqlite3
 
-def listar_media_idade_filhos_por_departamento():
-    conn = sqlite3.connect('empresa.db')
-    cursor = conn.cursor()
+conn = sqlite3.connect('empresa.db')
+cursor = conn.cursor()
 
-    query = '''
-    SELECT d.nome_departamento, AVG(strftime('%Y', 'now') - strftime('%Y', dep.data_nascimento)) AS media_idade
-    FROM Dependentes dep
-    JOIN Funcionarios f ON dep.id_funcionario = f.id_funcionario
-    JOIN Departamentos d ON f.departamento_id = d.id_departamento
-    GROUP BY d.nome_departamento
-    '''
-    
-    cursor.execute(query)
-    results = cursor.fetchall()
+query = '''
+SELECT nome_projeto, custo, data_inicio, data_conclusao, f.nome AS funcionario_responsavel
+FROM projetos p
+JOIN funcionarios f ON p.funcionario_responsavel = f.id_funcionario
+WHERE p.status = 'Em Execução';
+'''
 
-    for row in results:
-        print(row)
+cursor.execute(query)
 
-    conn.close()
+resultados = cursor.fetchall()
 
-listar_media_idade_filhos_por_departamento()
+for row in resultados:
+    print(f'Nome do Projeto: {row[0]}')
+    print(f'Custo: {row[1]}')
+    print(f'Data de Início: {row[2]}')
+    print(f'Data de Conclusão: {row[3]}')
+    print(f'Funcionário Responsável: {row[4]}')
+    print('-' * 40)
+
+conn.close()

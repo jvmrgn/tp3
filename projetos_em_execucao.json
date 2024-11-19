@@ -1,0 +1,26 @@
+[
+    {
+        "id_projeto": 2,
+        "nome_projeto": "Site Institucional",
+        "custo": 20000,
+        "data_inicio": "2023-03-01",
+        "data_conclusao": "2023-09-15",
+        "funcionario_responsavel": "Ana Souza"
+    },
+    {
+        "id_projeto": 6,
+        "nome_projeto": "Software de Gestão",
+        "custo": 80000,
+        "data_inicio": "2023-07-01",
+        "data_conclusao": "Em andamento",
+        "funcionario_responsavel": "João Silva"
+    },
+    {
+        "id_projeto": 7,
+        "nome_projeto": "E-commerce",
+        "custo": 45000,
+        "data_inicio": "2023-08-15",
+        "data_conclusao": "2024-01-30",
+        "funcionario_responsavel": "Ana Souza"
+    }
+]

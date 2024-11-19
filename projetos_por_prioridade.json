@@ -1,0 +1,72 @@
+[
+    {
+        "id_projeto": 1,
+        "nome_projeto": "Sistema de RH",
+        "custo": 50000,
+        "status": "Concluído",
+        "prioridade": "Alta"
+    },
+    {
+        "id_projeto": 2,
+        "nome_projeto": "Site Institucional",
+        "custo": 20000,
+        "status": "Em Execução",
+        "prioridade": "Média"
+    },
+    {
+        "id_projeto": 3,
+        "nome_projeto": "App de Delivery",
+        "custo": 75000,
+        "status": "Em Planejamento",
+        "prioridade": "Alta"
+    },
+    {
+        "id_projeto": 4,
+        "nome_projeto": "Campanha de Marketing",
+        "custo": 15000,
+        "status": "Concluído",
+        "prioridade": "Baixa"
+    },
+    {
+        "id_projeto": 5,
+        "nome_projeto": "Automação Financeira",
+        "custo": 60000,
+        "status": "Cancelado",
+        "prioridade": "Alta"
+    },
+    {
+        "id_projeto": 6,
+        "nome_projeto": "Software de Gestão",
+        "custo": 80000,
+        "status": "Em Execução",
+        "prioridade": "Alta"
+    },
+    {
+        "id_projeto": 7,
+        "nome_projeto": "E-commerce",
+        "custo": 45000,
+        "status": "Em Execução",
+        "prioridade": "Média"
+    },
+    {
+        "id_projeto": 8,
+        "nome_projeto": "Análise de Dados",
+        "custo": 70000,
+        "status": "Em Planejamento",
+        "prioridade": "Alta"
+    },
+    {
+        "id_projeto": 9,
+        "nome_projeto": "Rebranding",
+        "custo": 25000,
+        "status": "Concluído",
+        "prioridade": "Média"
+    },
+    {
+        "id_projeto": 10,
+        "nome_projeto": "Gestão de Estoque",
+        "custo": 55000,
+        "status": "Em Planejamento",
+        "prioridade": "Baixa"
+    }
+]
